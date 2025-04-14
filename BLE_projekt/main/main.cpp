@@ -2,5 +2,7 @@
 
 extern "C" void app_main(void)
 {
-    int x;
+    if(höger == vänster){
+        printf("Bull shit");
+    }
 }
