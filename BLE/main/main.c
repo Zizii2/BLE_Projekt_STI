@@ -127,7 +127,7 @@ void app_main(void) {
     nimble_host_config_init();
 
     /* Start NimBLE host task thread and return */
-    xTaskCreate(nimble_host_task, "NimBLE Host", 4*1024, NULL, 5, NULL);
+    //xTaskCreate(nimble_host_task, "NimBLE Host", 4*1024, NULL, 5, NULL);
     xTaskCreate(heart_rate_task, "Heart Rate", 4*1024, NULL, 5, NULL);
     return;
 }
