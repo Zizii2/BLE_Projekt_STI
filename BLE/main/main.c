@@ -7,8 +7,8 @@
 #include "common.h"
 #include "gap.h"
 #include "gatt_svc.h"
-#include "heart_rate.h"
-#include "led.h"
+#include "heart_rate.h" //VI BEHÖVER INTE
+#include "led.h" //LED VI BEHÖVER INTE
 
 /* Library function declarations */
 void ble_store_config_init(void);

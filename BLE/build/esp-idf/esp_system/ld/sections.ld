@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\repos\BLE_Projekt_STI\BLE\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\programering C C++\Datorkomunikation\BLE_Projekt_STI\BLE\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

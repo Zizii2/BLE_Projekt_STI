@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/repos/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader
-C:/repos/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader.rule
-C:/repos/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader-complete.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/repos/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/CMakeFiles/bootloader-complete.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/programering C C++/Datorkomunikation/BLE_Projekt_STI/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
