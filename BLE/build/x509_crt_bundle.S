@@ -1,4 +1,4 @@
-/* * Data converted from C:/repos/BLE_Projekt_STI/BLE/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Applications/BLE_Projekt_STI/BLE/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
