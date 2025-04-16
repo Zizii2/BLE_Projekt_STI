@@ -83,7 +83,8 @@ void app_main(void) {
     int rc;
     esp_err_t ret;
 
-    /* LED initialization */ //ibra test ibraaaa
+    /* LED initialization */ 
+    //jkhfajkshfasjkhfsakj
     led_init();
 
     /*
