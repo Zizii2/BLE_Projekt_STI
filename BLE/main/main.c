@@ -57,33 +57,34 @@ static void nimble_host_task(void *param) {
     vTaskDelete(NULL);
 }
 
-static void heart_rate_task(void *param) {
+//static void heart_rate_task(void *param) {
     /* Task entry log */
-    ESP_LOGI(TAG, "heart rate task has been started!");
+   // ESP_LOGI(TAG, "heart rate task has been started!");
 
     /* Loop forever */
-    while (1) {
+    //while (1) {
         /* Update heart rate value every 1 second */
-        update_heart_rate();
-        ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
+      //  update_heart_rate();
+        //ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
 
         /* Send heart rate indication if enabled */
-        send_heart_rate_indication();
+        //send_heart_rate_indication();
 
         /* Sleep */
-        vTaskDelay(HEART_RATE_TASK_PERIOD);
-    }
+        //vTaskDelay(HEART_RATE_TASK_PERIOD);
+  //  }
 
     /* Clean up at exit */
-    vTaskDelete(NULL);
-}
+    //vTaskDelete(NULL);
+//}
 
 void app_main(void) {
     /* Local variables */
     int rc;
     esp_err_t ret;
 
-    /* LED initialization */
+    /* LED initialization */ 
+    //jkhfajkshfasjkhfsakj
     led_init();
 
     /*
@@ -127,7 +128,7 @@ void app_main(void) {
     nimble_host_config_init();
 
     /* Start NimBLE host task thread and return */
-    xTaskCreate(nimble_host_task, "NimBLE Host", 4*1024, NULL, 5, NULL);
-    xTaskCreate(heart_rate_task, "Heart Rate", 4*1024, NULL, 5, NULL);
+    //xTaskCreate(nimble_host_task, "NimBLE Host", 4*1024, NULL, 5, NULL);
+    //xTaskCreate(heart_rate_task, "Heart Rate", 4*1024, NULL, 5, NULL);
     return;
 }
