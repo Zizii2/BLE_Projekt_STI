@@ -1,4 +1,4 @@
-/build
-.vscode
+build/
+.vscode/
 sdkconfig
-sdkconfig.default./*
+sdkconfig.default
