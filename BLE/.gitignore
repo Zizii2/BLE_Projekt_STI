@@ -1,4 +1,16 @@
+#build stuff
 build/
 .vscode/
+managed_components/
+dependencies.lock
+
+#sdk files
 sdkconfig
-sdkconfig.default
+sdkconfig.default.esp32
+sdkconfig.default.esp32c3
+sdkconfig.default.esp32c5
+sdkconfig.default.esp32c5
+sdkconfig.default.esp32c61
+sdkconfig.default.esp32h2
+sdkconfig.default.esp32s3
+sdkconfig.old
