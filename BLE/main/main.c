@@ -132,3 +132,10 @@ void app_main(void) {
     //xTaskCreate(heart_rate_task, "Heart Rate", 4*1024, NULL, 5, NULL);
     return;
 }
+
+/// @brief This is a test function
+/// @param  void nothing
+/// @return returns 0 always
+int get_avg(void){
+    return 0;
+}
