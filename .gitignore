@@ -1,10 +1,15 @@
 .vscode/
 
-Beacon/sdkconfig.ci.esp32c2_xtal26m_receiver
-Beacon/sdkconfig.ci.esp32c2_xtal26m_sender
-Beacon/sdkconfig.ci.receiver
-Beacon/sdkconfig.ci.sender
-Beacon/sdkconfig.defaults
-Beacon/sdkconfig.defaults.esp32c2
-Beacon/sdkconfig.defaults.esp32c3
-Beacon/sdkconfig.defaults.esp32s3
+**/sdkconfig.ci.esp32c2_xtal26m_receiver
+**/sdkconfig.ci.esp32c2_xtal26m_sender
+**/sdkconfig.ci.receiver
+**/sdkconfig.ci.sender
+**/sdkconfig.defaults
+**/sdkconfig.defaults.esp32c2
+**/sdkconfig.defaults.esp32c3
+**/sdkconfig.defaults.esp32c5
+**/sdkconfig.defaults.esp32c6
+**/sdkconfig.defaults.esp32c61
+**/sdkconfig.defaults.esp32h2
+**/sdkconfig.defaults.esp32s3
+**/sdkconfig.defaults.esp32
