@@ -9,6 +9,7 @@
 #include "gatt_svc.h"
 #include "heart_rate.h" //VI BEHÖVER INTE
 #include "led.h" //LED VI BEHÖVER INTE
+#include "ultraljudsensor.h"
 
 /* Library function declarations */
 void ble_store_config_init(void);
@@ -78,13 +79,33 @@ static void heart_rate_task(void *param) {
     vTaskDelete(NULL);
 }
 
+static void sesnor_task(void *param) {
+    /* Task entry log */
+    ESP_LOGI(TAG, "heart rate task has been started!");
+
+    /* Loop forever */
+    while (1) {
+        /* Update heart rate value every 1 second */
+        update_heart_rate();
+        //ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
+
+        /* Send heart rate indication if enabled */
+        send_heart_rate_indication();
+
+        /* Sleep */
+        vTaskDelay(HEART_RATE_TASK_PERIOD);
+    }
+
+    /* Clean up at exit */
+    vTaskDelete(NULL);
+}
+
 void app_main(void) {
     /* Local variables */
     int rc;
     esp_err_t ret;
 
     /* LED initialization */ 
-    //jkhfajkshfasjkhfsakj
     led_init();
 
     /*
