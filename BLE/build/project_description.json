@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "BLE",
-    "project_version":    "f387bd2-dirty",
+    "project_version":    "e5f5ca0-dirty",
     "project_path":       "/Applications/BLE_Projekt_STI/BLE",
     "idf_path":           "/Users/regissoren/esp/v5.4/esp-idf",
     "build_dir":          "/Applications/BLE_Projekt_STI/BLE/build",

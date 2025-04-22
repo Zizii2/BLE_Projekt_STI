@@ -12,7 +12,7 @@
 
 /* Library function declarations */
 void ble_store_config_init(void);
-//hfhjdhfjsdhfjhdhs
+//hfhjdhfjsdhfjhdhsdsvdsc
 /* Private function declarations */
 static void on_stack_reset(int reason);
 static void on_stack_sync(void);
