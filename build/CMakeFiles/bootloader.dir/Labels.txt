@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Applications/BLE_Projekt_STI/build/CMakeFiles/bootloader
+/Applications/BLE_Projekt_STI/build/CMakeFiles/bootloader.rule
+/Applications/BLE_Projekt_STI/build/CMakeFiles/bootloader-complete.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Applications/BLE_Projekt_STI/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
