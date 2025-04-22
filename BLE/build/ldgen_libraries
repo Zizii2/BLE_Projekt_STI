@@ -85,3 +85,4 @@
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/espressif__led_strip/libespressif__led_strip.a
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/main/libmain.a
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/libnvs.a

@@ -834,3 +834,10 @@
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/main/CMakeFiles/install.dir
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/main/CMakeFiles/install/local.dir
 /Applications/BLE_Projekt_STI/BLE/build/esp-idf/main/CMakeFiles/install/strip.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/__idf_nvs.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/edit_cache.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/rebuild_cache.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/list_install_components.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/install.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/install/local.dir
+/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/CMakeFiles/install/strip.dir

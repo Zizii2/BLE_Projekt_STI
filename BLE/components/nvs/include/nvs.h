@@ -1,8 +1,14 @@
-#pragma once
+#ifndef NVS_STORAGE_H
+#define NVS_STORAGE_H
+
 #include "esp_err.h"
 
-esp_err_t nvs_helper_write_i32(const char* key, int32_t value);
-esp_err_t nvs_helper_read_i32(const char* key, int32_t* out_value);
+class NVSStorage {
+public:
+    static esp_err_t init();
+    static esp_err_t saveSensorData(int sensor_value);
+    static esp_err_t readSensorData(int &sensor_value);
+};
 
-
+#endif 
 

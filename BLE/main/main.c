@@ -12,7 +12,7 @@
 
 /* Library function declarations */
 void ble_store_config_init(void);
-
+//hfhjdhfjsdhfjhdhs
 /* Private function declarations */
 static void on_stack_reset(int reason);
 static void on_stack_sync(void);
@@ -126,6 +126,7 @@ void app_main(void) {
     }
 
     /* NimBLE host configuration initialization */
+    
     nimble_host_config_init();
 
     /* Start NimBLE host task thread and return */

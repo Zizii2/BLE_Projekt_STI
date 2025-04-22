@@ -552,3 +552,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Applications/BLE_Projekt_STI/BLE/build/esp-idf/main/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Applications/BLE_Projekt_STI/BLE/build/esp-idf/nvs/cmake_install.cmake")
+endif()
+
