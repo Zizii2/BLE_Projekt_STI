@@ -25,7 +25,7 @@ void ultrasonic_init(ultrasonic_config_t *sensor) {
     gpio_config(&io_conf);
 }
 
-float ultrasonic_measure() {
+float ultrasonic_measure(void) {
     gpio_set_level(sensor_config->trig_pin, 0);
     vTaskDelay(pdMS_TO_TICKS(2));  
 

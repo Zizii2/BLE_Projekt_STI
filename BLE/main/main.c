@@ -58,42 +58,41 @@ static void nimble_host_task(void *param) {
     vTaskDelete(NULL);
 }
 
-static void heart_rate_task(void *param) {
-    /* Task entry log */
-    ESP_LOGI(TAG, "heart rate task has been started!");
+// static void heart_rate_task(void *param) {
+//     /* Task entry log */
+//     ESP_LOGI(TAG, "heart rate task has been started!");
 
-    /* Loop forever */
-    while (1) {
-        /* Update heart rate value every 1 second */
-        update_heart_rate();
-        //ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
+//     /* Loop forever */
+//     while (1) {
+//         /* Update heart rate value every 1 second */
+//         update_heart_rate();
+//         //ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
 
-        /* Send heart rate indication if enabled */
-        send_heart_rate_indication();
+//         /* Send heart rate indication if enabled */
+//         send_heart_rate_indication();
 
-        /* Sleep */
-        vTaskDelay(HEART_RATE_TASK_PERIOD);
-    }
+//         /* Sleep */
+//         vTaskDelay(HEART_RATE_TASK_PERIOD);
+//     }
 
-    /* Clean up at exit */
-    vTaskDelete(NULL);
-}
+//     /* Clean up at exit */
+//     vTaskDelete(NULL);
+// }
 
 static void sesnor_task(void *param) {
     /* Task entry log */
-    ESP_LOGI(TAG, "heart rate task has been started!");
-
+    float temp = ultrasonic_measure();
     /* Loop forever */
     while (1) {
         /* Update heart rate value every 1 second */
-        update_heart_rate();
-        //ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
+        
+        ESP_LOGI(TAG, "sesnor updated to %.3f", ultrasonic_measure());
 
         /* Send heart rate indication if enabled */
-        send_heart_rate_indication();
+        send_sensor_indication();
 
         /* Sleep */
-        vTaskDelay(HEART_RATE_TASK_PERIOD);
+        vTaskDelay(SESNOR_TASK_PERIOD);
     }
 
     /* Clean up at exit */
@@ -101,12 +100,14 @@ static void sesnor_task(void *param) {
 }
 
 void app_main(void) {
+    ultrasonic_config_t cfg = {
+        .trig_pin = GPIO_NUM_10,
+        .echo_pin = GPIO_NUM_11,
+    };
+    ultrasonic_init(&cfg);
     /* Local variables */
     int rc;
     esp_err_t ret;
-
-    /* LED initialization */ 
-    led_init();
 
     /*
      * NVS flash initialization
@@ -150,6 +151,6 @@ void app_main(void) {
 
     /* Start NimBLE host task thread and return */
     xTaskCreate(nimble_host_task, "NimBLE Host", 4*1024, NULL, 5, NULL);
-    xTaskCreate(heart_rate_task, "Heart Rate", 4*1024, NULL, 5, NULL);
+    xTaskCreate(sesnor_task, "sesnsor", 4*1024, NULL, 5, NULL);
     return;
 }
