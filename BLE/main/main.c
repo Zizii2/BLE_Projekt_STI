@@ -81,12 +81,12 @@ static void nimble_host_task(void *param) {
 
 static void sesnor_task(void *param) {
     /* Task entry log */
-    int temp = 420;
+    float temp = ultrasonic_measure();
     /* Loop forever */
     while (1) {
         /* Update heart rate value every 1 second */
         
-        // ESP_LOGI(TAG, "heart rate updated to %d", get_heart_rate());
+        ESP_LOGI(TAG, "sesnor updated to %.3f", ultrasonic_measure());
 
         /* Send heart rate indication if enabled */
         send_sensor_indication();
@@ -100,12 +100,14 @@ static void sesnor_task(void *param) {
 }
 
 void app_main(void) {
+    ultrasonic_config_t cfg = {
+        .trig_pin = GPIO_NUM_10,
+        .echo_pin = GPIO_NUM_11,
+    };
+    ultrasonic_init(&cfg);
     /* Local variables */
     int rc;
     esp_err_t ret;
-
-    /* LED initialization */ 
-    led_init();
 
     /*
      * NVS flash initialization

@@ -25,12 +25,6 @@ static uint16_t sensor_chr_conn_handle = 0;
 static bool sensor_chr_conn_handle_inited = false;
 static bool sensor_ind_status = false;
 
-/* Automation IO service */
-static const ble_uuid16_t auto_io_svc_uuid = BLE_UUID16_INIT(0x1815);
-static uint16_t led_chr_val_handle;
-static const ble_uuid128_t led_chr_uuid =
-    BLE_UUID128_INIT(0x23, 0xd1, 0xbc, 0xea, 0x5f, 0x78, 0x23, 0x15, 0xde, 0xef,
-                     0x12, 0x12, 0x25, 0x15, 0x00, 0x00);
 
 /* GATT services table */
 static const struct ble_gatt_svc_def gatt_svr_svcs[] = {
@@ -47,19 +41,6 @@ static const struct ble_gatt_svc_def gatt_svr_svcs[] = {
              {
                  0, /* No more characteristics in this service. */
              }}},
-
-    /* Automation IO service */
-    {
-        .type = BLE_GATT_SVC_TYPE_PRIMARY,
-        .uuid = &auto_io_svc_uuid.u,
-        .characteristics =
-            (struct ble_gatt_chr_def[]){/* LED characteristic */
-                                        {.uuid = &led_chr_uuid.u,
-                                         .access_cb = led_chr_access,
-                                         .flags = BLE_GATT_CHR_F_WRITE,
-                                         .val_handle = &led_chr_val_handle},
-                                        {0}},
-    },
 
     {
         0, /* No more services. */
@@ -90,7 +71,7 @@ static int sensor_chr_access(uint16_t conn_handle, uint16_t attr_handle,
         /* Verify attribute handle */
         if (attr_handle == sensor_chr_val_handle) {
             /* Update access buffer value */
-            sesnor_chr_val[1] = get_heart_rate();
+            sensor_chr_val[1] = ultrasonic_measure();
             rc = os_mbuf_append(ctxt->om, &sensor_chr_val,
                                 sizeof(sensor_chr_val));
             return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
